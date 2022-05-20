@@ -26,12 +26,32 @@ class NotificationSettingView: UIView {
         return imageView
     }()
     
+    private let label: UILabel = {
+        let label = UILabel()
+        label.text = "To stay up-to-date enable Push Notifications!"
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let button: UIButton = {
+        let button = UIButton()
+        button.setTitle("Enable Notification", for: .normal)
+        button.backgroundColor = .systemPink
+        button.setTitleColor(.white, for: .normal)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(imageView)
+        addSubview(label)
+        addSubview(button)
     }
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    override func layoutSubView(){
+        super.layoutSubView()
     }
 }
 
