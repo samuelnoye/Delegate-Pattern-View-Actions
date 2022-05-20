@@ -30,8 +30,8 @@ class NotificationSettingView: UIView {
         super.init(frame: frame)
         addSubview(imageView)
     }
-//    required init?(coder: NSCoder) {
-//        fatalError()
-//    }
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
 }
 
