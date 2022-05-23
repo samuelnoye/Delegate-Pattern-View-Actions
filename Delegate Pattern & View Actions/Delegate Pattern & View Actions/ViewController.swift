@@ -8,9 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-  override func viewDidLoad() {
+    
+    private let notitficationView = SecondViewController()
+    
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        notitficationView.frame = CGRect(x: 10, y: view.safeAreaInsets.top, width: view.frame.size.width - 20, height: view.frame.size.height - view.safeAreaInsets.top -  view.safeAreaInsets.bottom)
     }
 
 }
